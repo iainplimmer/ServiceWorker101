@@ -1,0 +1,19 @@
+{
+  "name": "serviceworkings",
+  "version": "0.0.1",
+  "description": "Website create to learn about service workers and shizzle.",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "service",
+    "worker",
+    "javascript"
+  ],
+  "author": "Iain Plimmer",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
