@@ -9,7 +9,10 @@ self.addEventListener('install', function (event){
     event.waitUntil(
         caches.open(version)
         .then(function(cache) {
-            return cache.addAll(['offline.html']);
+            return cache.addAll([
+                './offline/index.html',
+                './offline/testing.js'
+                ]);
         }));
 });
 
@@ -45,7 +48,7 @@ self.addEventListener('fetch', function (event) {
             }
 
             if (!navigator.onLine) {
-                return caches.match(new Request('offline.html'));
+                return caches.match(new Request('offline/index.html'));
             }
 
             return fetch(event.request);
