@@ -4,7 +4,7 @@
   "description": "Website create to learn about service workers and shizzle.",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server"
+    "start": "http-server"
   },
   "keywords": [
     "service",
@@ -14,6 +14,6 @@
   "author": "Iain Plimmer",
   "license": "MIT",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "http-server": "^0.10.0"
   }
 }

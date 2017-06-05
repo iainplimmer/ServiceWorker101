@@ -1,7 +1,15 @@
 <html>
     <head>
         <title>Service Workings?</title>
-        <script src='./index.js'></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js')
+                .then(() => {
+                    console.log
+                })
+                .catch(err => console.error('Looks like there is an error....', err))
+            }        
+        </script>
     </head>
     <body>
         <p>Props to <a href="https://jakearchibald.github.io/isserviceworkerready/">IsServiceWorkerReady?</a></p>        

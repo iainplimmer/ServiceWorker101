@@ -1,4 +1,4 @@
-const version = 'v2.3';
+const version = 'v1';
 let log = console.log.bind(console);
 
 //  Event automatically called on registration of the service worker by 'navigator.serviceWorker.register'
