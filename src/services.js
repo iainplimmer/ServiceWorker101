@@ -2,7 +2,7 @@
 
 (function (navigator) {
     angular.module('swApp')
-    .service('DataService', function ($http, $q, $rootScope) {
+    .service('DataService', function ($http, $q) {
         return {
             GetData : function () {
                 if (!navigator.onLine) {
@@ -21,7 +21,7 @@
                     //  when we are offline later.
                     return $http.get('https://jsonplaceholder.typicode.com/posts')
                         .then(response => {                
-                            let data = response.data.slice(0,5);
+                            let data = response.data.slice(0,10);
                             localStorage.setItem('application-data', JSON.stringify(data));               
                             localStorage.setItem('application-data-stamp', new Date().toLocaleTimeString());               
                             return data;
