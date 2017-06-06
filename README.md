@@ -6,3 +6,8 @@ The application itself only gets data from a single service, then caches that da
 If the application goes offline, the cache data is shown on the screen instead of the live data.
 
 Simple? You think but it took a bit of thought the first time I did it :D
+
+To use:
+
+npm install
+npm start
