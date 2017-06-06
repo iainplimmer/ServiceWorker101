@@ -10,4 +10,7 @@ Simple? You think but it took a bit of thought the first time I did it :D
 To use:
 
 npm install
+
+gulp watch
+
 npm start
