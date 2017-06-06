@@ -8,11 +8,11 @@
                     console.log
                 })
                 .catch(err => console.error('Looks like there is an error....', err))
-            }        
+            }     
         </script>
+        <script src="./dist/app.min.js"></script>
     </head>
-    <body>
-        <p>Props to <a href="https://jakearchibald.github.io/isserviceworkerready/">IsServiceWorkerReady?</a></p>        
-        <p><a href="fakepageinoursite.html">Go to a fake page and see if we are offline????</a></p>
+    <body ng-app='swApp'>
+        <datacomponent></datacomponent>
     </body>        
 </html>

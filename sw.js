@@ -86,10 +86,17 @@ function _fetchAndUpdate(request) {
         if (res) {
             return caches.open(version)
             .then(cache => {
-                return cache.put(request, res.clone())
-                .then(() => {
+
+                //  We don't want to cache the data that is coming from the service!
+                if (request.url != 'https://jsonplaceholder.typicode.com/posts') {
+                    return cache.put(request, res.clone())
+                    .then(() => {
+                        return res;
+                    });
+                }
+                else {
                     return res;
-                })
+                }
             })
         }
     });
